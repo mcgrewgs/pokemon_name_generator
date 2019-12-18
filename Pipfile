@@ -7,8 +7,6 @@ name = "pypi"
 python_version = "3"
 
 [packages]
-pygame = "~=1.9.6"
-venvdotapp = "~=19.7.1"
 
 [dev-packages]
 pylint = "~=2.2.2"

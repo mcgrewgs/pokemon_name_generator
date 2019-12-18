@@ -1,5 +1,6 @@
 from typing import List, Dict, Set
 from functools import lru_cache
+from sys import argv
 
 
 # @lru_cache(maxsize=1_048_576, typed=False)
@@ -158,6 +159,17 @@ def suggested_names(s: str) -> Set[str]:
 
     return to_return
 
+
+def main():
+    name = argv[1].strip().lower()
+    names = sorted(list(suggested_names(name)))
+    print(name.capitalize())
+    for n in names:
+        print(f"  {n.capitalize()}")
+
+
+if __name__ == "__main__":
+    main()
 
 # CLOSE_WORDS: Dict[str, List[str]] = {}
 # for wl in WORDS_BY_LENGTH.values():
